@@ -11,7 +11,7 @@ public class StringCalculator {
 	}
 	
 	public int Add(String numbers) {
-		int res = 0;
+		int sum = 0;
 		if(numbers.length() == 0) {
 			return 0;
 		}
@@ -20,6 +20,11 @@ public class StringCalculator {
 			return Integer.parseInt(numbers);
 		}
 		
-		return res;
+		for(int i=0; i<numbers.length(); i+=2) {
+			int n = numbers.charAt(i) - '0';
+			sum += n;
+		}
+		
+		return sum;
 	}
 }

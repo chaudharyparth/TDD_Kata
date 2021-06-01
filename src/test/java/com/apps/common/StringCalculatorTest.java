@@ -37,4 +37,10 @@ public class StringCalculatorTest {
 		int res = app.Add("1");
 		assertEquals(1, res);
 	}
+	
+	@Test
+	public void AddTestN() {
+		int res = app.Add("1,2,3");
+		assertEquals(6, res);
+	}
 }
